@@ -1,0 +1,8 @@
+
+NROWS="$(wc -l runParameters.dat | awk '{print $1}')"
+## submit main slurm script and store job_id to a variable
+a0="$(sbatch --array=1-$NROWS%2 workerScript.scr)"
+a1="$(echo $a1 | awk '{print $4}')"
+
+## run the cleanup job depending on the appropriate job_id
+sbatch --depend=afterok:$a1 cleanUp.scr

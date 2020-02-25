@@ -1,3 +1,9 @@
+
+## Ignore
+*.DS_store
+*.ini
+*.csv
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -33,6 +39,7 @@
 *.run.xml
 
 ## Build tool auxiliary files:
+*.project.vim
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)

@@ -1,0 +1,15 @@
+#!/bin/bash -l
+
+#SBATCH
+#SBATCH --job-name=CleanUP
+#SBATCH --time=0:10:0 
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --partition=express
+#SBATCH --mail-type=end
+#SBATCH --mail-user=jpatsol1@jhu.edu
+
+ml python/3.8
+source ~/env_examples/bin/activate
+
+python plot.py
