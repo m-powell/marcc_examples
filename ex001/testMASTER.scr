@@ -2,7 +2,7 @@
 NSEQ=$(awk '{print $2}' runParameters.dat | grep -Fn "2" | awk -F"\"*:\"*" '{print $1}')
 NROWS="$(wc -l runParameters.dat | awk '{print $1}')"
 ## submit main slurm script and store job_id to a variable
-a0="$(sbatch --array=1-$NROWS:10%1 workerScript.scr)"
+a0="$(sbatch --array=1-$NROWS:10%1 workerScript.scr)"; echo $a0
 a1="$(echo $a0 | awk '{print $4}')"
 
 ## run the cleanup job depending on the appropriate job_id
