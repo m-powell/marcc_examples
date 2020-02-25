@@ -2,7 +2,7 @@
 NROWS="$(wc -l runParameters.dat | awk '{print $1}')"
 ## submit main slurm script and store job_id to a variable
 a0="$(sbatch --array=1-$NROWS%2 workerScript.scr)"; echo $a0
-a1="$(echo $a1 | awk '{print $4}')"
+a1="$(echo $a0 | awk '{print $4}')"
 
 ## run the cleanup job depending on the appropriate job_id
 ## only if all jobs exited cleanly.
