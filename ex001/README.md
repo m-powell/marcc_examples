@@ -77,5 +77,9 @@ as to not overlaod the queue.
 
 ## Running on MARCC
 
-Starting from the `marcc_examples` directory
+Starting from the `marcc_examples/ex001` directory,
+
+
+
+
 
