@@ -25,7 +25,8 @@ pip install -r marcc_examples/requirements.txt
 This is the workhorse python script.  It takes command line arguments as
 parameters to tell the script which dataset to use with which
 parameters.  It also takes in a set of fixed parameters from the
-[`config.dat`](./config.dat) file.
+[`config.dat`](./config.dat) file. It ultimately trains a randomForest
+on using the input dataset ID and writes the results to disk.
 
 
 ### [`workerScript.scr`](./workerScript.scr)
@@ -79,7 +80,12 @@ as to not overlaod the queue.
 
 Starting from the `marcc_examples/ex001` directory,
 
+After one has a basic grasp of what the above files are doing you can
+run the whole Job with the following:
 
+```
+sh MASTER.scr
+```
 
 
 
