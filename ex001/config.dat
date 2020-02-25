@@ -1,15 +1,11 @@
 [default]
 ntrees = 500
-njobs = 8
-nruns = 100
 random_state = 21208
-test_size = 0.50
+test_size = 0.25
 lambda = 1.0
 
 [dev]
 ntrees = 10
-njobs = 2
-nruns = 10
 random_state = 21208
-test_size = 0.50
+test_size = 0.75
 lambda = 1.0

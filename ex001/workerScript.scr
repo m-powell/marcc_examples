@@ -30,6 +30,7 @@ if [[ "$USER" == "jpatsol1@jhu.edu" ]]; then
 	dataID=$(awk '{print $1}' $PARAMS | sed "$SLURM_ARRAY_TASK_ID q;d")
 	runID=$(awk '{print $2}' $PARAMS | sed "$SLURM_ARRAY_TASK_ID q;d") 
 elif [[ "$USER" == "JLP" ]]; then
+        SLURM_NTASKS=2
 	## read the first line of DATFILE for dev
 	dataID=$(awk '{print $1}' $PARAMS | sed "1 q;d") 
 	runID=$(awk '{print $2}' $PARAMS | sed "1 q;d") 

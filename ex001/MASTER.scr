@@ -5,4 +5,5 @@ a0="$(sbatch --array=1-$NROWS%2 workerScript.scr)"
 a1="$(echo $a1 | awk '{print $4}')"
 
 ## run the cleanup job depending on the appropriate job_id
+## only if all jobs exited cleanly.
 sbatch --depend=afterok:$a1 cleanUp.scr

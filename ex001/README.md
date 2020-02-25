@@ -24,13 +24,15 @@ pip install -r marcc_examples/requirements.txt
 
 This is the workhorse python script.  It takes command line arguments as
 parameters to tell the script which dataset to use with which
-parameters.  
+parameters.  It also takes in a set of fixed parameters from the
+[`config.dat`](./config.dat) file.
 
 
 ### [`workerScript.scr`](./workerScript.scr)
 
-This is the slurm scirpt that sets up the job and cluster parameters
-such as number of nodes per job, cpus, memory, ...
+This is the slurm scirpt that sets up the individual job parameters,
+such as number of nodes per job, cpus, memory, etc. and calls `skrf.py`
+feeding it the job parameters for the given job in the array.
 
 
 ### [`cleanUp.scr`](./cleanUp.scr)
@@ -39,10 +41,12 @@ This is a slurm script that runs the clean up scripts which could be
 anything from moving files around, aggregating outputs from the previous
 jobs, plotting, etc.
 
+
 ### [`plot.py`](./plot.py)
 
 This is an example clean up script in python for aggregating and
 plotting the results.
+
 
 ### [`config.dat`](./config.dat)
 
@@ -52,17 +56,20 @@ each individual job.  There are two sections, `default` for MARCC and
 as number of runs, or number of trees to an acceptable level for
 testing before release on the cluster.
 
+
 ### [`runParameters.dat`](./runParameters.dat)
 
-This is a space delimited file the contains the parameters used for each
-individual job.  Specifically, it has `dataID` `runID`.  The parameters
-on line `i` are used for job `i` in teh job array.
+This is a space delimited file that contains the parameters used for
+each individual job.  The parameters on line `i` are used for job `i` in
+the job array. For this example we have `dataID` `runID`.
+
 
 ### [`MASTER.scr`](./MASTER.scr)
 
 This is the MASTER script.  It is in charge of submitting the main job
-as a job array with the appropriate lenght and submitting the cleanUp
-job as a dependancy.
+as a job array with the appropriate length and submitting the cleanUp
+job as a dependancy. It limits the job array to run 2 jobs concurrently so
+as to not overlaod the queue.
 
 
 ---
@@ -70,5 +77,5 @@ job as a dependancy.
 
 ## Running on MARCC
 
-
+Starting from the `marcc_examples` directory
 

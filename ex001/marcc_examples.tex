@@ -66,13 +66,25 @@
         \item \verb;git clone https://github.com/neurodata/marcc_examples.git;
         \item \verb;ml python/3.8;
         \item \verb;python -m venv ~/env_examples;
+        \item \verb;pip install -r marcc_examples/requirements.txt;
     \end{enumerate}
 \end{frame}
 
 
+\section{The Scripts}
 
-\begin{frame}{The setup}
-
+\begin{frame}
+    \begin{tabular}{l p{.75\textwidth}}
+\textit{skrf.py} & The main python script that takes parameters such as
+dataset ID, run ID,n\_jobs, output directory\dots.\\
+%
+\textit{workerScript.scr} & The slurm script used for each individual job.\\
+%
+\textit{cleanUp.scr} & The script that runs the cleanup job/s.\\
+%
+\textit{MASTER.scr} & The master script that sets up the job array and
+sets cleanUp as a dependant job to be run after all exit cleanly.\\
+    \end{tabular}
 \end{frame}
 
 
@@ -81,6 +93,11 @@
 
 
 \end{document}
+
+%`git clone https://github.com/neurodata/marcc_examples.git`
+%`ml python/3.8`
+%`python -m venv ~/env_examples`
+%`pip install -r marcc_examples/requirements.txt`
 
 %%%
 %%% TIME: 

@@ -36,14 +36,12 @@ if socket.gethostname() == "Synapse.local": ## Check if I'm on my Mac.
     config_lev = "dev"
 else:  ## Else assume we're on the cluster
     config_lev = "default"
-config_lev = "dev"
 
 ### config file for parameters
 config = configparser.ConfigParser()
 config.read(config_file)
 
 ntrees = int(config[config_lev]['ntrees'])
-njobs = int(config[config_lev]['njobs'])
 random_state = int(config[config_lev]['random_state'])
 test_size = float(config[config_lev]['test_size'])
 lam = float(config[config_lev]['lambda'])
