@@ -80,12 +80,15 @@ as to not overlaod the queue.
 
 Starting from the `marcc_examples/ex001` directory,
 
-After one has a basic grasp of what the above files are doing you can
-run the whole Job with the following:
+To run this on your own MARCC account you must update the lines with
+`--mail-type=` and `--mail-user=` with `end` and your username
+respectively in the files `workerScript.scr` and `cleanUp.scr`.
+
+After one has a basic grasp of what the files in the above section are
+doing you can run the whole Job with the following:
 
 ```
 sh MASTER.scr
 ```
-
 
 
