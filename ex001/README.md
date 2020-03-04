@@ -14,6 +14,7 @@ The run this example on MARCC the folowing steps must be completed:
 git clone https://github.com/neurodata/marcc_examples.git
 ml python/3.8
 python -m venv ~/env_examples
+source ~/env_examples/bin/activate
 pip install -r marcc_examples/requirements.txt
 ```
 
