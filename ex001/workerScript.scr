@@ -21,4 +21,5 @@
 
 ## python skrf.py <outdir> <dataid> <runid> <njobs>
 ml python/3.8
+source ~/thm_1_testing/bin/activate
 python Theorem_1_Testing.py
