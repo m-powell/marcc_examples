@@ -186,7 +186,7 @@ entropy_importance_persists = np.zeros(iterations)
 
 for i in range(iterations):
 
-    print(f"Iteration: {i}")
+    print(f'Iteration: {i}')
     np.random.seed(123 + i)
 
     # Construct a new cov1 matrix.
@@ -247,24 +247,24 @@ for i in range(iterations):
     )
 
 np.savetxt(
-    "thm_1_testing_loss_entropy_agree_1f.csv", loss_entropy_agree_1f, delimiter=","
+    'thm_1_testing_loss_entropy_agree_1f.csv', loss_entropy_agree_1f, delimiter=','
 )
 np.savetxt(
-    "thm_1_testing_loss_entropy_agree_2f.csv", loss_entropy_agree_2f, delimiter=","
+    'thm_1_testing_loss_entropy_agree_2f.csv', loss_entropy_agree_2f, delimiter=','
 )
 np.savetxt(
-    "thm_1_testing_loss_importance_persists.csv",
+    'thm_1_testing_loss_importance_persists.csv',
     loss_importance_persists,
-    delimiter=",",
+    delimiter=',',
 )
 np.savetxt(
-    "thm_1_testing_entropy_importance_persists.csv",
+    'thm_1_testing_entropy_importance_persists.csv',
     entropy_importance_persists,
-    delimiter=",",
+    delimiter=',',
 )
 
-print(f"Loss/Entropy Agreement (1 Feature): {np.mean(loss_entropy_agree_1f):.3f}")
-print(f"Loss/Entropy Agreement (2 Features): {np.mean(loss_entropy_agree_2f):.3f}")
-print(f"Loss Importance Persists: {np.mean(loss_importance_persists):.3f}")
-print(f"Entropy Importance Persists: {np.mean(entropy_importance_persists):.3f}")
+print(f'Loss/Entropy Agreement (1 Feature): {np.mean(loss_entropy_agree_1f):.3f}')
+print(f'Loss/Entropy Agreement (2 Features): {np.mean(loss_entropy_agree_2f):.3f}')
+print(f'Loss Importance Persists: {np.mean(loss_importance_persists):.3f}')
+print(f'Entropy Importance Persists: {np.mean(entropy_importance_persists):.3f}')
 
