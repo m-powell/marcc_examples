@@ -20,5 +20,5 @@
 ## sbatch --array=n-N%M slurmScript.scr 
 
 ## python skrf.py <outdir> <dataid> <runid> <njobs>
-
+ml python/3.8
 python Theorem_1_Testing.py
