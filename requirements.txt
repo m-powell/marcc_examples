@@ -1,6 +1,0 @@
-scikit-learn
-matplotlib
-openml
-pandas
-configparser
-slacker
