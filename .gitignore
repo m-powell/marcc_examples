@@ -2,7 +2,7 @@
 ## Ignore
 *.DS_store
 *.ini
-*.csv
+##*.csv
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
