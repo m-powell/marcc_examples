@@ -22,4 +22,4 @@
 ## python skrf.py <outdir> <dataid> <runid> <njobs>
 ml python/3.8
 source ~/thm_1_testing/bin/activate
-python Theorem_1_Testing.py
+python Theorem_1_Testing_Correlation_vs_H_Y_Xj.py
